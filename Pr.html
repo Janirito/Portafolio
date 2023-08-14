@@ -1,83 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Presentación Web</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  .slide {
-    display: none;
-    padding: 20px;
-    text-align: center;
-  }
-  .slide img {
-    max-width: 100%;
-    height: auto;
-  }
-  #navigation {
-    text-align: center;
-    margin-top: 20px;
-  }
-  #prev, #next {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    margin: 0 10px;
-  }
-</style>
+    <title>Ejemplo Básico</title>
 </head>
 <body>
-<div class="slide" style="display: block;">
-  <h1>Título de la Diapositiva 1</h1>
-  <p>Contenido de la diapositiva 1.</p>
-  <img src="imagen1.jpg" alt="Imagen 1">
-</div>
-<div class="slide">
-  <h1>Título de la Diapositiva 2</h1>
-  <p>Contenido de la diapositiva 2.</p>
-  <img src="imagen2.jpg" alt="Imagen 2">
-</div>
-<div class="slide">
-  <h1>Título de la Diapositiva 3</h1>
-  <p>Contenido de la diapositiva 3.</p>
-  <img src="imagen3.jpg" alt="Imagen 3">
-</div>
-<div id="navigation">
-  <button id="prev">Anterior</button>
-  <button id="next">Siguiente</button>
-</div>
-<script>
-  let slideIndex = 0;
-  showSlide(slideIndex);
-
-  document.getElementById("prev").addEventListener("click", () => {
-    showSlide(slideIndex -= 1);
-  });
-
-  document.getElementById("next").addEventListener("click", () => {
-    showSlide(slideIndex += 1);
-  });
-
-  function showSlide(index) {
-    const slides = document.querySelectorAll(".slide");
-    if (index >= slides.length) {
-      slideIndex = 0;
-    }
-    if (index < 0) {
-      slideIndex = slides.length - 1;
-    }
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slides[slideIndex].style.display = "block";
-  }
-</script>
+    <h1>¡Hola, mundo!</h1>
+    <p>Este es un ejemplo básico de HTML.</p>
 </body>
 </html>
